@@ -1,0 +1,15 @@
+--- Makefile.modfinal_orig	2024-05-03 22:40:03.303143927 +0900
++++ Makefile.modfinal	2024-05-03 22:40:25.936138774 +0900
+@@ -54,9 +54,9 @@
+ # Re-generate module BTFs if either module's .ko or vmlinux changed
+ %.ko: %.o %.mod.o scripts/module.lds $(and $(CONFIG_DEBUG_INFO_BTF_MODULES),$(KBUILD_BUILTIN),vmlinux) FORCE
+ 	+$(call if_changed_except,ld_ko_o,vmlinux)
+-ifdef CONFIG_DEBUG_INFO_BTF_MODULES
+-	+$(if $(newer-prereqs),$(call cmd,btf_ko))
+-endif
++#ifdef CONFIG_DEBUG_INFO_BTF_MODULES
++#	+$(if $(newer-prereqs),$(call cmd,btf_ko))
++#endif
+ 
+ targets += $(modules:%.o=%.ko) $(modules:%.o=%.mod.o)
+ 
