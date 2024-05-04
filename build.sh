@@ -13,11 +13,26 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install screen
+# rpm-ostree install screen
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
 
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
+# systemctl enable podman.socket
+
+rpm-ostree install \
+    dwarves \
+    patch \
+    htop \
+    tldr \
+    im-chooser \
+    fcitx5 \
+    fcitx5-anthy \
+    fcitx5-configtool \
+    fcitx5-mozc \
+    python3-distutils-extra \
+    python3-matplotlib-gtk3 \
+    python3-scipy \
+    meson
