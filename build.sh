@@ -35,4 +35,5 @@ rpm-ostree install \
     python3-distutils-extra \
     python3-matplotlib-gtk3 \
     python3-scipy \
+    python3-qt5 \
     meson
