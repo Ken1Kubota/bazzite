@@ -57,7 +57,6 @@ COPY build /tmp/build/
     
 RUN rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}' > /tmp/kernel-version.txt && \
     /tmp/build/hid-fanatecff/build_hid_fanatecff.sh && \
-    /tmp/build/oversteer/build_oversteer.sh && \
     depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" && \
     ostree container commit 
 

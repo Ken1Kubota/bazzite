@@ -1,8 +1,0 @@
---- meson_options.txt_orig	2024-05-04 22:53:25.840007021 +0900
-+++ meson_options.txt	2024-05-04 23:15:19.286792848 +0900
-@@ -5,4 +5,4 @@
- option('udev_rules_dir',
-        description: 'Installation path for udev rules',
-        type: 'string',
--       value: '')
-+       value: '/usr/lib/udev/rules.d')
