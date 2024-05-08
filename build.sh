@@ -32,6 +32,7 @@ rpm-ostree install \
     fcitx5-anthy \
     fcitx5-configtool \
     fcitx5-mozc \
+    onedrive \
     python3-distutils-extra \
     python3-matplotlib-gtk3 \
     python3-scipy \
