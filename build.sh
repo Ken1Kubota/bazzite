@@ -38,3 +38,99 @@ rpm-ostree install \
     python3-scipy \
     python3-qt5 \
     meson
+
+# sddm
+rpm-ostree install \
+    sddm \
+    sddm-themes \
+    qt5-qtgraphicaleffects \
+    qt5-qtquickcontrols2 \
+    qt5-qtsvg \
+
+# launcher
+rpm-ostree install \
+    rofi-wayland
+
+# environment
+rpm-ostree install \
+    xorg-x11-server-Xwayland \
+    polkit \
+    lxpolkit \
+    xdg-user-dirs \
+    dbus-tools \
+    dbus-daemon \
+    wl-clipboard \
+    gnome-keyring \
+    pavucontrol \
+    playerctl \
+    qt5-qtwayland \
+    qt6-qtwayland \
+    vulkan-validation-layers \
+    vulkan-tools \
+    google-noto-emoji-fonts \
+    gnome-disk-utility
+  
+# sound
+rpm-ostree install \
+    wireplumber \
+    pipewire \
+    pamixer
+
+# networking
+rpm-ostree install \
+    network-manager-applet \
+    NetworkManager-openvpn \
+    NetworkManager-openconnect \
+    bluez \
+    bluez-tools \
+    blueman
+
+# file manager
+rpm-ostree install \
+    thunar \
+    thunar-archive-plugin \
+    thunar-volman \
+    xarchiver \
+    imv \
+    p7zip \
+    unrar-free
+
+# screenshot
+rpm-ostree install \
+    slurp \
+    grim
+
+# display
+rpm-ostree install \
+    wlr-randr \
+    wlsunset \
+    brightnessctl \
+    swaylock \
+    swayidle \
+    kanshi
+
+# terminal
+rpm-ostree install \
+    kitty
+
+# notifications
+rpm-ostree install \
+    dunst
+
+# theme and GUI
+rpm-ostree install \
+    adwaita-qt5 \
+    fontawesome-fonts-all \
+    gnome-themes-extra \
+    gnome-icon-theme \
+    paper-icon-theme \
+    breeze-icon-theme \
+    papirus-icon-theme
+
+# hyprland
+rpm-ostree install \
+    hyprland \
+    waybar \
+    wlogout \
+    xdg-desktop-portal-hyprland \
+    brightnessctl

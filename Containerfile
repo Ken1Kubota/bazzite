@@ -48,9 +48,14 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG} as source-im
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
+COPY system_files/usr /usr/
+COPY system_files/hyprland/usr /usr/
+COPY config/scripts /tmp/scripts/
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    /tmp/scripts/settheming.sh && \
+    /tmp/scripts/sethyprlandwaybarmodules.sh && \
     ostree container commit
 
 COPY build /tmp/build/
