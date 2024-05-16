@@ -73,7 +73,8 @@ rpm-ostree install \
     vulkan-validation-layers \
     vulkan-tools \
     google-noto-emoji-fonts \
-    gnome-disk-utility
+    gnome-disk-utility \
+    ImageMagick
   
 # sound
 rpm-ostree install \
@@ -118,9 +119,14 @@ rpm-ostree install \
 rpm-ostree install \
     kitty
 
+
+# snapshot
+rpm-ostree install \
+    swappy
+
 # notifications
 rpm-ostree install \
-    dunst
+    SwayNotificationCenter
 
 # theme and GUI
 rpm-ostree install \
@@ -136,10 +142,18 @@ rpm-ostree install \
 rpm-ostree install \
     hyprland \
     waybar \
-    swww \
     wlogout \
-    xdg-desktop-portal-hyprland \
-    brightnessctl
+    xdg-desktop-portal-hyprland
+
+# copr
+rpm-ostree install \
+    aylurs-gtk-shell \
+    cliphist \
+    hypridle \
+    hyprlock \
+    pamixer \
+    pyprland \
+    swww
 
 rm /etc/yum.repos.d/_copr_solopasha_hyprland.repo
 rm /etc/yum.repos.d/_copr_en4aew_desktop-tools.repo
