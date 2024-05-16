@@ -146,5 +146,4 @@ rm /etc/yum.repos.d/_copr_en4aew_desktop-tools.repo
 rm /etc/yum.repos.d/_copr_alebastr_sway-extras.repo
 rm /etc/yum.repos.d/_copr_erikreider_SwayNotificationCenter.repo
 
-rpm-ostree refresh-md
 
