@@ -32,6 +32,7 @@ rpm-ostree install \
     patch \
     htop \
     tldr \
+    zoxide \
     im-chooser \
     fcitx5 \
     fcitx5-anthy \
