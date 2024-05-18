@@ -26,6 +26,7 @@ curl -Lo /etc/yum.repos.d/_copr_solopasha_hyprland.repo https://copr.fedorainfra
 curl -Lo /etc/yum.repos.d/_copr_en4aew_desktop-tools.repo https://copr.fedorainfracloud.org/coprs/en4aew/desktop-tools/repo/fedora-${RELEASE}/en4aew-desktop-tools-fedora-${RELEASE}.repo 
 curl -Lo /etc/yum.repos.d/_copr_alebastr_sway-extras.repo https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-${RELEASE}/alebastr-sway-extras-fedora-${RELEASE}.repo 
 curl -Lo /etc/yum.repos.d/_copr_erikreider_SwayNotificationCenter.repo https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-${RELEASE}/erikreider-SwayNotificationCenter-fedora-${RELEASE}.repo 
+curl -Lo /etc/yum.repos.d/enpass-yum.repo https://yum.enpass.io/enpass-yum.repo
 
 rpm-ostree install \
     dwarves \
@@ -43,7 +44,8 @@ rpm-ostree install \
     python3-matplotlib-gtk3 \
     python3-scipy \
     python3-qt5 \
-    meson
+    meson \
+    enpass
 
 # sddm
 rpm-ostree install \
@@ -160,5 +162,5 @@ rm /etc/yum.repos.d/_copr_solopasha_hyprland.repo
 rm /etc/yum.repos.d/_copr_en4aew_desktop-tools.repo
 rm /etc/yum.repos.d/_copr_alebastr_sway-extras.repo
 rm /etc/yum.repos.d/_copr_erikreider_SwayNotificationCenter.repo
-
+rm /etc/yum.repos.d/enpass-yum.repo
 
