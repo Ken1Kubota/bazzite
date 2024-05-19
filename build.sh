@@ -43,7 +43,8 @@ rpm-ostree install \
     python3-matplotlib-gtk3 \
     python3-scipy \
     python3-qt5 \
-    meson
+    meson \
+    timeshift
 
 # sddm
 rpm-ostree install \
