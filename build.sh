@@ -22,7 +22,6 @@ RELEASE="$(rpm -E %fedora)"
 
 # systemctl enable podman.socket
 
-curl -Lo /etc/yum.repos.d/wezfurlong_wezterm-nightly.repo https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-${RELEASE}/wezfurlong-wezterm-nightly-fedora-${RELEASE}.repo 
 curl -Lo /etc/yum.repos.d/_copr_solopasha_hyprland.repo https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-${RELEASE}/solopasha-hyprland-fedora-${RELEASE}.repo 
 curl -Lo /etc/yum.repos.d/_copr_en4aew_desktop-tools.repo https://copr.fedorainfracloud.org/coprs/en4aew/desktop-tools/repo/fedora-${RELEASE}/en4aew-desktop-tools-fedora-${RELEASE}.repo 
 curl -Lo /etc/yum.repos.d/_copr_alebastr_sway-extras.repo https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-${RELEASE}/alebastr-sway-extras-fedora-${RELEASE}.repo 
@@ -39,7 +38,6 @@ rpm-ostree install \
     fcitx5-anthy \
     fcitx5-configtool \
     fcitx5-mozc \
-    wezterm \
     onedrive \
     python3-distutils-extra \
     python3-matplotlib-gtk3 \
@@ -158,7 +156,6 @@ rpm-ostree install \
     pyprland \
     swww
 
-rm /etc/yum.repos.d/wezfurlong_wezterm-nightly.repo
 rm /etc/yum.repos.d/_copr_solopasha_hyprland.repo
 rm /etc/yum.repos.d/_copr_en4aew_desktop-tools.repo
 rm /etc/yum.repos.d/_copr_alebastr_sway-extras.repo
