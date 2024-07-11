@@ -58,12 +58,12 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/scripts/sethyprlandwaybarmodules.sh && \
     ostree container commit
 
-COPY build /tmp/build/
-    
-RUN rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}' > /tmp/kernel-version.txt && \
-    /tmp/build/hid-fanatecff/build_hid_fanatecff.sh && \
-    depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" && \
-    ostree container commit 
+# COPY build /tmp/build/
+#     
+# RUN rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}' > /tmp/kernel-version.txt && \
+#     /tmp/build/hid-fanatecff/build_hid_fanatecff.sh && \
+#     depmod -a "$(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')" && \
+#     ostree container commit 
 
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
